@@ -75,6 +75,7 @@ API_RESOURCES = [
     "Services",
     "Routes",
     "Ingress",
+    "NetworkPolicies",
     "pvc",
     "configmap",
     "pgreplicas",
@@ -87,7 +88,7 @@ CONTAINER_COMMANDS = {
     'collect' : [],
     'database' : ["patronictl list", "patronictl history"],
     'pgbadger' : [],
-    'all' : ["ps aux --width 500"]
+    'all' : ["ps aux --width 500", "df -h", "env"]
 }
 
 def run():
